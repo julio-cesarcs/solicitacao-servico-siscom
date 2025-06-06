@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.title h1 {
+  color: #0d8ce9;
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interacao {
+  display: flex;
+  justify-content: space-around;
+  width: 90vw;
+  margin: 1rem;
+  padding: 1rem;
+  height: 5rem;
+}
+
+.interacao .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.interacao .buttons button {
+  background-color: #0d8ce9;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100px;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-color: #fff;
+}
+
+.interacao .search {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.interacao .search #search-bar {
+  width: 500px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+.table{
+  width: 90%;
+}
+
+table{
+  width: 100%;
+}
+
+table thead tr {
+  background-color: #0d8ce9;
+  color: #fff;
+}
+
+table thead tr th, 
+table tbody tr td {
+  padding: .5rem;
+}
+
+table tbody tr {
+  background-color: #fff;
+  color: #000;
+}
+
+footer {
+  background-color: #0d8ce9;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
