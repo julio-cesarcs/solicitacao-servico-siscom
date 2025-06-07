@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solicitação de Serviço</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/main.js" defer></script>
-    <script src="js/api.js" defer></script>
-    <script src="js/ui.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/api.js" defer></script>
+    <script type="module" src="js/ui.js" defer></script>
   </head>
   <body>
     <header>
@@ -16,19 +16,19 @@
       </div>
     </header>
     <main>
-      <section class="interacao">
+      <section class="interaction-area">
         <div class="buttons">
-          <button type="button">Novo</button>
-          <button type="button">Editar</button>
-          <button type="button">Excluir</button>
-          <button type="button">Enviar</button>
-          <button type="button">Imprimir</button>
+          <button type="button" id="btn-new">Novo</button>
+          <button type="button" id="btn-edit">Editar</button>
+          <button type="button" id="btn-delete">Excluir</button>
+          <button type="button" id="btn-send">Enviar</button>
+          <button type="button" id="btn-print">Imprimir</button>
         </div>
         <div class="search">
           <input type="text" id="search-bar" placeholder="Procurar" />
         </div>
       </section>
-      <section class="table">
+      <section class="table-area">
         <table>
           <thead>
             <tr>
@@ -131,7 +131,7 @@
               <td>24/01/2025</td>
               <td>Arthur Guimarães Bueno</td>
               <td>Praia Brava</td>
-              <td>Grava 1</td>
+              <td>Brava 1</td>
               <td>Realizar roçada.</td>
               <td>Felipe Alves ou Luciano - Ramal 9782</td>
             </tr>
@@ -140,7 +140,7 @@
               <td>24/01/2025</td>
               <td>Arthur Guimarães Bueno</td>
               <td>Praia Brava</td>
-              <td>Grava 2</td>
+              <td>Brava 2</td>
               <td>Realizar roçada.</td>
               <td>Felipe Alves ou Luciano - Ramal 9782</td>
             </tr>
@@ -474,6 +474,47 @@
             </tr>
           </tbody>
         </table>
+      </section>
+      <section class="request-area">
+        <div class="request">
+          <div class="data-system">
+            <div>
+              <label for="input-number">Número</label
+              ><input type="text" name="input-number" id="input-number" />
+            </div>
+            <div>
+              <label for="input-date">Data</label>
+              <input type="text" name="input-date" id="input-date" />
+            </div>
+          </div>
+          <div>
+            <label for="input-requester">Solicitante</label>
+            <input type="text" name="input-requester" id="input-requester" />
+          </div>
+          <div>
+            <label for="input-contact">Contato</label>
+            <input type="text" name="input-contact" id="input-contact" />
+          </div>
+          <div>
+            <label for="input-local">Local</label>
+            <input type="text" name="input-local" id="input-local" />
+          </div>
+          <div>
+            <label for="input-address">Endereço</label
+            ><input type="text" name="input-address" id="input-address" />
+          </div>
+          <div>
+            <label for="textarea-description">Descrição de Serviço</label>
+            <textarea
+              name="textarea-description"
+              id="textarea-description"
+              rows="5"></textarea>
+          </div>
+        </div>
+        <div class="request-buttons">
+          <button type="button" id="btn-save">Salvar</button>
+          <button type="button" id="btn-cancel">Cancelar</button>
+        </div>
       </section>
     </main>
     <footer><p>Desenvolvido por Julio César Costa da Silva</p></footer>
