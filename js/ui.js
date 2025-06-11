@@ -41,6 +41,7 @@ const ui = {
       tdDescricao,
       tdContato
     );
+    tr.classList.add('select')
     tBody.append(tr);
     tableRequest.append(tBody);
   },
