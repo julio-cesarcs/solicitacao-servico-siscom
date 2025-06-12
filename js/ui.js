@@ -41,7 +41,27 @@ const ui = {
       tdDescricao,
       tdContato
     );
-    tr.classList.add('select')
+
+    tr.onclick = () => {
+      ui.getDataOfTable(
+        tdNumero.textContent,
+        tdData.textContent,
+        tdSolicitante.textContent,
+        tdLocal.textContent,
+        tdEndereco.textContent,
+        tdDescricao.textContent,
+        tdContato.textContent
+      );
+      if (tr.classList.contains("selected")) {
+        tr.classList.remove("selected");
+      } else {
+        const trs = document.querySelectorAll("tr");
+        trs.forEach((tr) => {
+          tr.classList.remove("selected");
+        });
+        tr.classList.add("selected");
+      }
+    };
     tBody.append(tr);
     tableRequest.append(tBody);
   },
@@ -52,6 +72,24 @@ const ui = {
 
   hideRequestArea() {
     document.body.classList.remove("modal-open");
+  },
+
+  getDataOfTable(
+    number,
+    date,
+    requester,
+    local,
+    address,
+    description,
+    contact
+  ) {
+    document.querySelector("#input-number").value = number;
+    document.querySelector("#input-date").value = date;
+    document.querySelector("#input-requester").value = requester;
+    document.querySelector("#input-local").value = local;
+    document.querySelector("#input-address").value = address;
+    document.querySelector("#textarea-description").value = description;
+    document.querySelector("#input-contact").value = contact;
   },
 };
 

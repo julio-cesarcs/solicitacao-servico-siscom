@@ -78,8 +78,8 @@ table tbody tr td {
   padding: 0.5rem;
 }
 
-.select {
-  background-color: #1d1d1d;
+.selected {
+  background-color: #123bad;
   color: #ff0;
 }
 
