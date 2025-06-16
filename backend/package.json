@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "json-server --watch db.json --port 3000"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/julio-cesarcs/solicitacao-servico-siscom#readme",
   "dependencies": {
-    "json-server": "^1.0.0-beta.3"
+    "json-server": "^1.0.0-beta.3",
+    "express": "^4.19.2"
   }
 }
