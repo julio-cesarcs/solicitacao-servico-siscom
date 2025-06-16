@@ -53,20 +53,26 @@
           <div class="data-system">
             <div>
               <label for="input-number">Número</label
-              ><input type="text" name="input-number" id="input-number" />
+              ><input
+                type="text"
+                name="input-number"
+                id="input-number"
+                disabled
+              />
             </div>
             <div>
               <label for="input-date">Data</label>
-              <input type="text" name="input-date" id="input-date" />
+              <input type="text" name="input-date" id="input-date" disabled />
             </div>
           </div>
           <div>
-            <label for="input-requester">Solicitante</label>
-            <input type="text" name="input-requester" id="input-requester" />
-          </div>
-          <div>
-            <label for="input-contact">Contato</label>
-            <input type="text" name="input-contact" id="input-contact" />
+            <label for="select-requester">Solicitante</label>
+            <select name="select-requester" id="select-requester">
+              <option value="">Selecione um fiscal</option>
+              <option value="arthur">Arthur Guimarães Bueno</option>
+              <option value="felipe">Felipe Lopes de Paula Couto</option>
+              <option value="lucio">Lúcio Mauro Bessa Cardoso</option>
+            </select>
           </div>
           <div>
             <label for="input-local">Local</label>
@@ -83,6 +89,15 @@
               id="textarea-description"
               rows="5"
             ></textarea>
+          </div>
+          <div>
+            <label for="input-contact">Contato</label>
+            <input
+              type="text"
+              name="input-contact"
+              id="input-contact"
+              placeholder="Nome - 9999"
+            />
           </div>
           <div class="request-buttons">
             <button type="submit" id="btn-save">Salvar</button>
