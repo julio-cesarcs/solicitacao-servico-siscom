@@ -43,6 +43,7 @@ searchBar.addEventListener("keydown", async (e) => {
   if (e.key === "Enter" || e.keyCode === 13) {
     const searchText = searchBar.value;
     const filteredRequests = await api.searchBy(searchText);
+    // Implementação da lógica de busca
   }
 });
 
