@@ -1,8 +1,11 @@
 import api from "./api.js";
 
 const ui = {
-  async renderTable() {
-    const resquestToRender = await api.getRequests();
+  async renderTable(filteredRequests = null) {
+    ui.clearTable();
+    const resquestToRender = !filteredRequests
+      ? await api.getRequests()
+      : filteredRequests;
     try {
       resquestToRender.forEach(ui.addRequestInTable);
     } catch (error) {
@@ -12,8 +15,8 @@ const ui = {
   },
 
   addRequestInTable(request) {
-    const tableRequest = document.querySelector("#table-request");
-    const tBody = document.createElement("tbody");
+    // const tableRequest = document.querySelector("#table-request");
+    const tBody = document.querySelector("#tbody-request");
     const tr = document.createElement("tr");
 
     const tdNumero = document.createElement("td");
@@ -65,7 +68,7 @@ const ui = {
       }
     };
     tBody.append(tr);
-    tableRequest.append(tBody);
+    // tableRequest.append(tBody);
   },
 
   showRequestArea() {
@@ -111,6 +114,14 @@ const ui = {
     if ((requester = "Felipe Lopes de Paula Couto")) return "felipe";
 
     if ((requester = "Lúcio Mauro Bessa Cardoso")) return "lucio";
+  },
+
+  clearTable() {
+    const tBodyRequest = document.querySelector("#tbody-request");
+    const tRows = tBodyRequest.querySelectorAll("tr");
+    tRows.forEach((tRow) => {
+      tRow.remove();
+    });
   },
 };
 export default ui;

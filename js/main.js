@@ -42,8 +42,10 @@ btnDelete.addEventListener("click", () => {
 searchBar.addEventListener("keydown", async (e) => {
   if (e.key === "Enter" || e.keyCode === 13) {
     const searchText = searchBar.value;
+    ui.clearTable();
     const filteredRequests = await api.searchBy(searchText);
-    // Implementação da lógica de busca
+    ui.renderTable(filteredRequests);
+    console.log(filteredRequests); //está exibindo corretamente
   }
 });
 
